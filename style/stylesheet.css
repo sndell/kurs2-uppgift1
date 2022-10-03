@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --primary-bg-color: #f0f3fb;
   --primary-color: #fff;
+  --secondary-color: rgb(37, 37, 39);
+  --tertiary-color: rgb(70, 70, 73);
   --primary-text-color: #2e3033;
   --primary-text-color-hover: #575a60;
+  --primary-bg-color: #f0f3fb;
 }
 
 body {
@@ -18,6 +20,7 @@ body {
 
 .container {
   max-width: 1200px;
+  flex: 1;
 }
 
 h1, h2, h4, p {
@@ -77,69 +80,85 @@ header {
   height: calc(100vh - 80px);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.info .info-introduction {
-  display: flex;
-  flex-direction: column;
-}
-
-.info .info-introduction h4 {
-  color: orange;
-}
-
-.info .info-right {
-  /* height: 400px; */
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.info .info-right .info__name {
-  line-height: 3rem;
-  font-size: 3rem;
+.info .info__name {
+  z-index: 1;
+  line-height: 4rem;
+  font-size: 4rem;
   font-weight: 400;
 }
 
-.info .info-right .info__title {
+.info .info__title {
+  z-index: 1;
   margin-top: 16px;
   line-height: 3rem;
   font-size: 3rem;
   font-weight: 200;
 }
 
-.info .info-right .info-buttons {
+.info .info-buttons {
+  z-index: 1;
   margin-top: 32px;
   display: flex;
   gap: 16px;
 }
 
-.info .info-right .info__button  {
+.info .info__button  {
   color: var(--primary-text-color);
   background-color: var(--primary-color);
   text-decoration: none;
-  padding: 2px 8px;
-  border-radius: 4px;
+  padding: 4px 8px;
+  border-radius: 8px;
   font-size: 1.5rem;
 }
 
-.info .info-right .info__button:hover  {
+.info .info__button:hover  {
   color: var(--primary-text-color-hover);
 }
 
 .info .info__summary {
-  line-height: 2.5rem;
-  font-size: 1.5rem;
+  z-index: 1;
+  max-width: 800px;
+  margin-top: 32px;
+  line-height: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 300;
 }
+
+/* .info .info-artwork {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.info .info-artwork .cube-1, .cube-2{
+  right: 0;
+  position: absolute;
+  border-radius: 16px;
+  width: 600px;
+  height: 600px;
+}
+
+.info .info-artwork .cube-1 {
+  background-color: var(--secondary-color);
+  bottom: -200px;
+}
+.info .info-artwork .cube-2 {
+  background-color: var(--tertiary-color);
+  right: 100px;
+  bottom: -50px;
+} */
 
 .portfolio {
   height: 100vh;
