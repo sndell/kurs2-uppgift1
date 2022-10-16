@@ -19,8 +19,12 @@ body {
 }
 
 .container {
-  max-width: 1200px;
   flex: 1;
+  min-height: 100vh;
+  max-width: 1200px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
@@ -31,16 +35,21 @@ p {
   margin: 0;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-}
-
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  min-height: 80px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.active {
+  color: rgb(168, 176, 202) !important;
 }
 
 .branding {
@@ -56,9 +65,10 @@ header {
 
 .nav .nav__list {
   display: flex;
-  align-items: center;
-  gap: 24px;
+  flex-wrap: wrap;
   list-style-type: none;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -67,6 +77,8 @@ header {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.25rem;
+  padding: 0 8px;
+  /* margin-left: 24px; */
   color: var(--primary-text-color);
 }
 
@@ -76,7 +88,8 @@ header {
 }
 
 .home {
-  height: calc(100vh - 80px);
+  /* height: calc(100vh - 80px); */
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -133,13 +146,8 @@ header {
   font-weight: 300;
 }
 
-.portfolio__header {
-  margin-bottom: 16px;
-}
-
 .portfolio .project {
   margin-bottom: 32px;
-  max-height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -152,6 +160,7 @@ header {
 }
 
 .portfolio .project .details {
+  width: 100%;
   display: flex;
   gap: 8px;
   flex-direction: column;
@@ -169,6 +178,7 @@ header {
 
 .portfolio .project .technologies {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -184,4 +194,32 @@ header {
 .resume embed {
   width: 100%;
   height: calc(100vh - 87px);
+}
+
+@media only screen and (max-width: 580px) {
+  header {
+    flex-direction: column;
+  }
+
+  .branding {
+    display: flex;
+    gap: 8px;
+    padding: 8px 0;
+  }
+}
+
+@media only screen and (max-width: 885px) {
+  .portfolio .project {
+    flex-direction: column;
+    gap: 16px;
+    /* align-items: start; */
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .portfolio .project img {
+    width: 100%;
+    height: calc(100% / 2.071197411);
+    border-radius: 4px;
+  }
 }
