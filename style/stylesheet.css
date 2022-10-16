@@ -25,6 +25,7 @@ body {
 
 h1,
 h2,
+h3,
 h4,
 p {
   margin: 0;
@@ -135,15 +136,17 @@ header {
   font-weight: 300;
 }
 
-.portfolio {
+.portfolio__header {
+  margin-bottom: 16px;
 }
 
 .portfolio .project {
+  margin-bottom: 24px;
+  max-height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 8px;
-  padding: 8px;
 }
 
 .portfolio .project .details {
@@ -158,6 +161,10 @@ header {
   align-items: center;
 }
 
+.portfolio .project .details__top h3 {
+  margin: 0;
+}
+
 .portfolio .project .technologies {
   display: flex;
   gap: 8px;
@@ -165,14 +172,6 @@ header {
 
 .portfolio .project .technologies a {
   margin-top: 8px;
-  background-color: #fff;
-  padding: 4px 6px;
-  border-radius: 4px;
-  text-decoration: none;
-  color: black;
-}
-
-.portfolio .project .github-button {
   background-color: #fff;
   padding: 4px 6px;
   border-radius: 4px;
