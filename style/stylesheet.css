@@ -54,9 +54,6 @@ header {
   font-weight: 400;
 }
 
-.nav {
-}
-
 .nav .nav__list {
   display: flex;
   align-items: center;
@@ -141,12 +138,17 @@ header {
 }
 
 .portfolio .project {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   max-height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 8px;
+}
+
+.portfolio .project img {
+  height: 200px;
+  border-radius: 4px;
 }
 
 .portfolio .project .details {
@@ -177,4 +179,9 @@ header {
   border-radius: 4px;
   text-decoration: none;
   color: black;
+}
+
+.resume embed {
+  width: 100%;
+  height: calc(100vh - 87px);
 }
